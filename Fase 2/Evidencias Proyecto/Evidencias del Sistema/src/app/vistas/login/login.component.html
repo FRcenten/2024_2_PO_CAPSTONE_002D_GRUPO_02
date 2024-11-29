@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <meta name="mobile-web-app-capable" content="yes">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="background-image"></div> <!-- Imagen de fondo -->
+
+  <div class="login-container">
+    <!-- Logo de la aplicación -->
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+    </div>
+
+    <!-- Card de Login -->
+    <ion-card class="login-card">
+      <ion-card-content>
+        <h2 class="title">Iniciar Sesión</h2>
+
+        <form (ngSubmit)="login()">
+          <!-- Campo para RUT -->
+          <ion-item>
+            <ion-label position="stacked">RUT</ion-label>
+            <ion-input
+              [(ngModel)]="rut"
+              name="rut"
+              type="text"
+              placeholder="12345678-9"
+              required
+            ></ion-input>
+          </ion-item>
+          <p *ngIf="errorRut" class="error-message">{{ errorRut }}</p> <!-- Mensaje de error RUT -->
+
+          <!-- Campo para Contraseña -->
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input
+              [(ngModel)]="password"
+              name="password"
+              type="password"
+              placeholder="Ingresa tu clave"
+              required
+            ></ion-input>
+          </ion-item>
+          <p *ngIf="errorPassword" class="error-message">{{ errorPassword }}</p> <!-- Mensaje de error contraseña -->
+
+          <!-- Botón de Ingresar -->
+          <ion-button
+            expand="full"
+            class="login-button"
+            color="primary"
+            type="submit"
+          >
+            Ingresar
+          </ion-button>
+        </form>
+
+        <!-- Enlace de Olvidaste tu clave -->
+        <p class="forgot-password" (click)="mostrarAlerta()">
+          ¿Olvidaste tu clave?
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Texto de ayuda -->
+    <p class="help-text" (click)="ayuda()">¿NECESITAS AYUDA?</p>
+  </div>
+</ion-content>
+

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button> <!-- Icono de retorno -->
+    </ion-buttons>
+    <ion-title class="subtitulo">Registro</ion-title> <!-- Título "Registro" -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-overlay"></div> <!-- Fondo con imagen o degradado -->
+
+  <div class="register-container">
+
+    <ion-card class="register-card">
+      <h3 class="subtitulo">Datos del Peatón</h3>
+      <ion-card-content>
+        <!-- Formulario de registro -->
+        <ion-item >
+          <ion-label position="stacked">RUN</ion-label>
+          <ion-input [(ngModel)]="newRVisita.visitanteRut" type="text" placeholder="Ingresa tu RUN"></ion-input>
+        </ion-item>
+
+        <ion-item >
+          <ion-label position="stacked">Nombre</ion-label>
+          <ion-input [(ngModel)]="newRVisita.Nombre"type="text" placeholder="Ingresa tu nombre"></ion-input>
+        </ion-item>
+
+        <ion-item >
+          <ion-label position="stacked">Apellidos</ion-label>
+          <ion-input [(ngModel)]="newRVisita.Apellidos" type="text" placeholder="Ingresa tus apellidos"></ion-input>
+        </ion-item>
+
+        <!-- Botón de registro -->
+        <ion-button expand="block" color="primary" class="register-btn" (click)="GuardarRegistro()" >Registrar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

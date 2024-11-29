@@ -1,0 +1,108 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1; /* Se coloca detrás del contenido */
+  }
+  .background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.3); /* Color azul con 50% de opacidad */
+    z-index: 1; /* La capa de color está encima de la imagen */
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  
+    .logo {
+      margin-bottom: 20px;
+      img {
+        width: 350px;
+      }
+    }
+  
+    .login-card {
+      width: 90%;
+      max-width: 400px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+    }
+  
+    .title {
+      text-align: center;
+      font-weight: bold;
+      color: #2727e2;
+      font-size: 24px;
+    }
+  
+    ion-item {
+      margin-bottom: 10px;
+    }
+  
+    .login-button {
+      --background: #2727e2;
+      --color: white;
+      margin-top: 20px;
+      --border-radius: 10px;
+    }
+  
+    .forgot-password {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      margin-top: 10px;
+    }
+  
+    .help-text {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+    }
+    .error-message {
+      color: #ff3b30; /* Color rojo para errores */
+      font-size: 14px;
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+  }
+  

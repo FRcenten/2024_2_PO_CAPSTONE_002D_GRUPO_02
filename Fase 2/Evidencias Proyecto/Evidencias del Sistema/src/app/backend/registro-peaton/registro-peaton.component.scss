@@ -1,0 +1,32 @@
+// Fondo con imagen o color degradado
+.background-overlay {
+    background: linear-gradient(135deg, #83bdff, #7fbdff); /* Degradado azul */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  .register-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
+  
+
+  .register-btn {
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    --background: #007aff; /* Botón azul más intenso */
+  }
+ .subtitulo{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #000000;
+ }

@@ -1,0 +1,51 @@
+<ion-header>
+  <!-- Contenedor con la imagen de fondo -->
+  <div class="header-background">
+    <ion-toolbar color="transparent">
+      <ion-buttons slot="end">
+        <!-- Ícono de perfil -->
+        <ion-icon name="person" size="large"></ion-icon>
+        <ion-title class="username">{{ nombre }} {{ apellidos }} </ion-title>
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-img src="assets/fondo2.png" class="background-image"></ion-img>
+  <div class="menu-container">
+    <ion-card class="menu-card">
+      <ion-card-content>
+        <div class="menu-buttons">
+          <ion-button expand="block" class="menu-button" (click)="lector()">
+            <ion-icon name="walk-outline" slot="start"></ion-icon>
+            Chequear Persona
+          </ion-button>
+          <ion-button expand="block" class="menu-button">
+            <ion-icon name="car-outline" slot="start"></ion-icon>
+            Chequear Vehículo
+          </ion-button>
+          <ion-button expand="block" class="menu-button">
+            <ion-icon name="people-outline" slot="start"></ion-icon>
+            Lista de Personas
+          </ion-button>
+          <ion-button expand="block" class="menu-button">
+            <ion-icon name="document-text-outline" slot="start"></ion-icon>
+            Lista de Vehículos
+          </ion-button>
+            <!-- Botón de emergencias -->
+            <ion-button expand="block" class="menu-button" color="warning" (click)="emergencia()">
+              <ion-icon name="call-outline" slot="start"></ion-icon>
+              Emergencias
+            </ion-button>
+          <ion-button expand="block" class="menu-button" color="danger" (click)="logout()">
+            <ion-icon name="close-circle-outline" slot="start"></ion-icon>
+            Cerrar Sesión
+          </ion-button>
+        
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+

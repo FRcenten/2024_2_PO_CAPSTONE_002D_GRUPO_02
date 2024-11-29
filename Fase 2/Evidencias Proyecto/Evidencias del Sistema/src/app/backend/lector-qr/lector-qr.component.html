@@ -1,0 +1,37 @@
+<ion-header>
+  <div class="header-background">
+    <ion-toolbar color="transparent">
+      <!-- Botón de retroceso con flecha blanca -->
+      <ion-buttons slot="start" >
+        <ion-back-button icon="arrow-back" color="light"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <!-- Imagen de fondo -->
+  <ion-img src="assets/fondo2.png" class="background-image"></ion-img>
+
+ <!-- Contenedor del lector QR -->
+ <div id="qr-reader" class="qr-reader"></div>
+
+ <div class="scanner-container">
+   <!-- Botón para iniciar el escaneo -->
+   <ion-button *ngIf="!isScanning" (click)="startWebScan()" expand="full" color="primary">
+     Iniciar Escaneo
+   </ion-button>
+
+   <!-- Botón para detener el escaneo -->
+   <ion-button *ngIf="isScanning" (click)="stopWebScan()" expand="full" color="danger">
+     Detener Escaneo
+   </ion-button>
+
+   <!-- Mostrar el RUN extraído -->
+   <div *ngIf="extractedRun" class="scanned-result">
+     <h3>RUN Extraído:</h3>
+     <p>{{ extractedRun }}</p>
+   </div>
+ </div>
+</ion-content>
