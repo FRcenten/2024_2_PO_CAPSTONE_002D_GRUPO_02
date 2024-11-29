@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@angular/fire": "^18.0.1",
+    "@capacitor-community/barcode-scanner": "^4.0.1",
+    "firebase": "^10.14.0",
+    "html5-qrcode": "^2.3.8"
+  }
+}
